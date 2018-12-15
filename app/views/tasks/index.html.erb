@@ -3,15 +3,15 @@
 
 <% if logged_in? %>
   <p>ログイン完了ユーザ: <%= current_user.name %></p>
-  
+
   <h1>タスク一覧</h1>
-  
+
   <% if @tasks.any? %>
     <table class="table table-striped">
       <thead>
         <tr>
           <th>id</th>
-          <th>ステータス</th>
+          <th>時間</th>
           <th>タスク</th>
         </tr>
       </thead>
@@ -28,9 +28,9 @@
     <div>
     </div>
   <% end %>
-  
+
   <%= link_to '新規タスクの投稿', new_task_path, class: "btn btn-primary" %>
-  
+
 <% else %>
   <div class="center jumbotron">
     <div class="text-center">
@@ -39,4 +39,3 @@
     </div>
   </div>
 <% end %>
-
